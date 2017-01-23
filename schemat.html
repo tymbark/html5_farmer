@@ -41,53 +41,52 @@
 						<section id="one">
 							<div class="inner">
 								<header class="major">
-									<h1>Dron</h1>
+									<h1>Schemat połączenia</h1>
 								</header>
-								
+
 								<p>
-									Dron jest wyposażony w minikomputer podobny do Raspberry, który steruje modułami znajdującymi się na dronie: GPS, GSM, bluetooth sBLE, czytnik RFID oraz sterownik silników odpowiedzialnych za poruszanie się drona. Dron startuje ze stacji bazowej i przelatuje nad pastwiskiem skanując wszystkie identyfikatory RFID w kolczykach. Dodatkowo dron może połączyć się z obrożą typu master i odebrać wszystkie dane, jeżeli na danym terenie nie ma zasięgu sieci GSM. 
+									Obroża typu master [A1] wykrywa inne obroże typu slave [A2] w odległości do 300 metrów za pomocą technologii sBLE (super bluetooth low energy). Zarówno [A1] jak i [A2] mogą wykrywać kolczyki z identyfikatorem RFID - [B1] i [B2] w zasięgu max 50 metrów. Na podstawie siły sygnału obroża [A2] określa odległość od [B2]. Następnie [A2] wysyła wszystkie dane o sobie oraz [B2] do obroży master [A1]. Ta obroża wyposażona w dodatkowe moduły GSM i GPS określa położenie każdej jednostki znajdującej się w zasięgu.
 								</p>
 
-								<img src="images/drone.jpg" alt="" width = "300"/>
+								<p>
+									Jeżeli na terenie pastwiska znajduje się zasięg sieci GSM, obroża [A1] wysyła wszystkie dane do systemu Smart Rolnik. Jeżeli nie ma zasięgu, istnieje możliwość budowy specjalnej anteny GSM [D] na terenie pastwiska, lub wysłanie drona [C] który połączy się z obrożą [A1] za pomocą sBLE, odbierze wszystkie dane i przekaże je do systemu, jak wróci do bazy. Antena [D] łączy się z satelitą IRIDIUM [E] która przekazuje te dane do systemu Smart  Rolnik. Satelita IRIDIUM krąży nad Ziemią w ogległości ok 780 km.
+								</p>
+
+
+								<p>
+									Jeżeli nie posiadasz żadnych obroży [A1] i [A2], dron [C] może skanować same identyfikatory RFID. Na schemacie oznaczone jako [B1]. W tym wypadku sugerowana wysokość przelotu drona to 30 metrów (zasięg maksymalny wykrywania identyfikatorów to 50 metrów).
+								</p>
+
+								<img src="images/schemat.png" alt="" width ="720"/>
 
 								<br><br><br>
-								<p>
-									Praca drona jest niemożliwa w skrajnie niekorzystnych warunkach pogodowych. Wiatr przekraczający prędkość 20 m/s może spowodować uszkodzenie drona. Intensywny opad deszczu i śniegu również wpływa niekorzystnie na pracę drona. Dron może poruszać się z maksymalną prędkością 100km/h, jednak aby efektywnie skanować wszystkie kolczyki RFID, powinien poruszać się z prędkością do 30km/h. Możliwe jest zwiększenie prędkości kosztem dokładności pomiaru GPS.
-								</p>
 
 								
-								<h1>Specyfikacja techniczna</h1>
+								<h1>Legenda</h1>
 
 								<table>
 								<tr>
-									<td>MIN temperatura pracy</td>	<td>0°C</td>
+									<td>A1</td>	<td>obroża typu master</td>
 								</tr>
 								<tr>
-									<td>MAX temperatura pracy</td>	<td>+40°C</td>
+									<td>A2</td>	<td>obroża typu slave</td>
 								<tr>
 								<tr>
-									<td>Cena jednostkowa drona</td>	<td>5000zł</td>
+									<td>B1</td>	<td>kolczyk RFID</td>
 								<tr>
 								<tr>
-									<td>Max czas pracy drona</td>	<td>30 minut</td>
+									<td>B2</td>	<td>kolczyk RFID</td>
 								<tr>
 								<tr>
-									<td>Max prędkość</td>	<td>100 km/h</td>
+									<td>C</td>	<td>dron</td>
 								<tr>
 								<tr>
-									<td>Max prędkość skanowania</td>	<td>30 km/h</td>
+									<td>D</td>	<td>antena GSM</td>
 								<tr>
 								<tr>
-									<td>Zasięg RFID (wykrywanie kolczyków RFID) </td>	<td>50m</td>
-								<tr>
-								<tr>
-									<td>Zasięg sBLE (wykrywanie obroży)</td>	<td>300m</td>
-								<tr>
-								<tr>
-									<td>Wymiary</td>	<td>ok 1m x 1m</td>
+									<td>E</td>	<td>satelita IRIDIUM</td>
 								<tr>
 								</table>
-
 
 							</div>
 						</section>

@@ -53,15 +53,25 @@
 								<br><br><br>
 								<p>
 									Obroża posiada dwa ogniwa fotowoltaczniczne umieszczone po bokach. Przy słonecznej pogodzie ogniwa ładują akumulatory znajnujące się w obroży i przedłużają czas działania obroży. Dzięki zastosowani najnowszych technologii w budowie ogniw fotowoltanicznych i akumulatorów, czas pracy obroży to ok 10 lat.
+
+								</p>
+								<img src="images/schemat4.png" alt="" width = "400"/>
+								<p>
 								
 									W obroży znajduje się moduł sBLE - super bluetooth low energy który charakteryzuje się zwiększonym zasięgiem oraz mniejszym poborem energii od tradycyjnego modułu BLE. Dwie obroże wykrywają się wzajemnie w odległości nawet 300 metrów.
 
-									"Mózgiem" obroży jest mikrokontroler który steruje wsztstkimi modułami.
+									"Mózgiem" obroży jest mikrokontroler który steruje wszystkimi modułami.
 
 									Obroża dodatkowo posiada moduł GSM który łączy się z siecią GSM aby regularnie wysyłać dane o zwierzętach do systemu Smart Rolnik. Jeżeli na terenie Twojego pastwiska nie ma zasięgu GSM, istnieje możliwość budowy zpecjalnej anteny która komunikuje się z satelitami IRIDIUM. Obroża może się również komunikować z naszym dronem za pomocą technologii bluetooth. Jednak w tym przypadku jest konieczność okresowego przelotu drona nad terenem.
 								</p>
 
-								
+								<img src="images/schemat3.png" alt="" width = "720"/>
+
+								<br><br><br>
+								<p>
+									Na powyższym schemacie zaprezentowany jest sposób komunikacji obroży między sobą. Otoczona zielonym okręgiem obroża typu master zbiera informacje od dwóch obroży typu slave znajdujących się w zasięgu sieci bluetooth (300 metrów). W ten sposób położenie zwierząt posiadających jedynie kolczyki, nie będących w zasięgu zielonego okręgu, ale pozostających w niebieskich okręgach jest znane. Oboża typu slave w czerwonym okręgu jest poza zasięgiem bluetooth obroży master. Może się ona jednak skomunikować z inną obrożą slave do której ma zasięg. Znakiem [X] na schemacie oznaczone jest zwierze nie znajdujące się za sięgu żadnej z obroży. Jego pozycja nie jest znana i wyświetlana jest ostatnia znana pozycja. Jeżeli zwierze znajdzie się z zasięgu którejś obroży, możliwe będzie ustalenie jego pozycji.
+								</p>
+
 								<h1>Specyfikacja techniczna</h1>
 
 								<table>
@@ -90,7 +100,7 @@
 									<td>Długość (możliwość regulacji) </td>	<td>ok 60cm</td>
 								<tr>
 								<tr>
-									<td>Mikrokontroler</td>	<td>//TODO</td>
+									<td>Mikrokontroler</td>	<td>Atmega 2560</td>
 								<tr>
 								</table>
 
